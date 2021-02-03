@@ -1,0 +1,72 @@
+@import 'Variables.scss';
+
+.skills {
+
+    &__container {
+        display: flex;
+        margin: auto;
+        padding: 7rem 3rem;
+        max-width: 1200px;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        width: 100%;
+        margin-bottom: 4rem;
+        color: $black;
+        font-size: $title-size;
+        position: relative;
+        text-align: center;
+
+        &::after {
+            content: '';
+            width: 6rem;
+            height: .3rem;
+            background-color: $main-color;
+            position: absolute;
+            top: 4rem;
+            transform: translateX(-50%);
+            left: 50%;
+        }
+    }
+
+    &__list {
+        margin-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    &__item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 3rem;
+
+        @media (min-width: 400px) {
+            width: 50%;
+        }
+
+        @media (min-width: 700px) {
+            width: 33%;
+        }
+
+        @media (min-width: 1024px) {
+            width: 20%;
+        }
+
+        img {
+            width: auto;
+            height: 5rem;
+        }
+    }
+
+    &__name {
+        margin-top: 1.5rem;
+        font-weight: 600;
+        font-size: $p-size;
+    }
+}
